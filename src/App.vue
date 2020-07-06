@@ -1,16 +1,21 @@
 <template>
   <div>
-    <h1>{{ title }}</h1>
-    <coders></coders>
+    <app-header></app-header>
+    <app-coders></app-coders>
+    <app-footer></app-footer>
   </div>
 </template>
 
 <script>
-import Coders from './Coders.vue';
+import Header from './components/Header.vue';
+import Footer from './components/Footer.vue';
+import Coders from './components/Coders.vue';
 
 export default {
   components: {
-    'coders': Coders, 
+    'app-coders': Coders,
+    'app-header': Header,
+    'app-footer': Footer, 
   },
   data () {
     return {
