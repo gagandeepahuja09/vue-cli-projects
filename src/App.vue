@@ -6,7 +6,12 @@
 </template>
 
 <script>
+import Coders from './Coders.vue';
+
 export default {
+  components: {
+    'coders': Coders, 
+  },
   data () {
     return {
       title: "Practice App"
