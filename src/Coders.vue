@@ -1,7 +1,8 @@
 <template>
   <div>
-    <h1>{{ title }}</h1>
-    <coders></coders>
+    <ul>
+        <li v-for="coder in coders">{{ coder }}</li>
+    </ul>
   </div>
 </template>
 
@@ -9,7 +10,7 @@
 export default {
   data () {
     return {
-      title: "Practice App"
+        coders: [ 'Gagandeep', 'Gary', 'Harry', 'Larry', 'Barry', 'Chotu' ]
     }
   },
   methods: {
