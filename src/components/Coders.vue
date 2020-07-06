@@ -7,7 +7,7 @@
                 <h3 v-show="coder.show">{{ coder.majors }}</h3>
             </li>
         </ul>
-        <button @click="showAll">Toggle All</button>
+        <button @click="deleteLast">Delete Last</button>
     </div>
   </header>
 </template>
@@ -30,6 +30,9 @@ export default {
             this.coders.map(coder => {
                 coder.show = !coder.show;
             })
+        },
+        deleteLast() {
+            this.coders.pop();
         }
     }
 }

@@ -2,6 +2,8 @@
   <div>
     <app-header></app-header>
     <app-coders :coders="coders"></app-coders>
+    <hr/>
+    <app-coders :coders="coders"></app-coders>
     <app-footer></app-footer>
   </div>
 </template>
