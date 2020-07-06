@@ -15,7 +15,12 @@
 <script>
 
 export default {
-    props: ['coders'],
+    props: {
+        coders: {
+            type: Array,
+            required: true,
+        }
+    },
     data() {
         return {
         }
