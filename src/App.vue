@@ -1,7 +1,7 @@
 <template>
   <div>
     <app-header></app-header>
-    <app-coders></app-coders>
+    <app-coders :coders="coders"></app-coders>
     <app-footer></app-footer>
   </div>
 </template>
@@ -19,7 +19,13 @@ export default {
   },
   data () {
     return {
-      title: "Practice App"
+      title: "Practice App",
+      coders: [
+            { name: "Gary", majors: "EIC", show: false },
+            { name: "Harry", majors: "ECE", show: false },
+            { name: "Larry", majors: "ENC", show: false },
+            { name: "Barry", majors: "CIE", show: false },
+        ],
     }
   },
   methods: {

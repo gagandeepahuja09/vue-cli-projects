@@ -14,16 +14,11 @@
 <script>
 
 export default {
-  data () {
-    return {
-        coders: [
-            { name: "Gary", majors: "EIC", show: false },
-            { name: "Harry", majors: "ECE", show: false },
-            { name: "Larry", majors: "ENC", show: false },
-            { name: "Barry", majors: "CIE", show: false },
-        ]
+    props: ['coders'],
+    data () {
+        return {
+        }
     }
-  }
 }
 </script>
 
