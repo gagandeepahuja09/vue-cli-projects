@@ -7,6 +7,7 @@
                 <h3 v-show="coder.show">{{ coder.majors }}</h3>
             </li>
         </ul>
+        <button @click="showAll">Toggle All</button>
     </div>
   </header>
 </template>
@@ -15,8 +16,15 @@
 
 export default {
     props: ['coders'],
-    data () {
+    data() {
         return {
+        }
+    },
+    methods: {
+        showAll() {
+            this.coders.map(coder => {
+                coder.show = !coder.show;
+            })
         }
     }
 }
