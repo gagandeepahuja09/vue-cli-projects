@@ -1,10 +1,10 @@
 <template>
   <div>
-    <app-header></app-header>
+    <app-header :title="title"></app-header>
     <app-coders :coders="coders"></app-coders>
     <hr/>
     <app-coders :coders="coders"></app-coders>
-    <app-footer></app-footer>
+    <app-footer :title="title"></app-footer>
   </div>
 </template>
 

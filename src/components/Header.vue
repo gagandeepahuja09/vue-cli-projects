@@ -1,15 +1,25 @@
 <template>
   <header>
-    <h1>{{ title }}</h1>
+    <h1 @click="removeTitle">{{ title }}</h1>
   </header>
 </template>
 
 <script>
 
 export default {
+  props: {
+    title: {
+      type: String
+    }
+  },
   data () {
     return {
-        title: "Coders"
+    }
+  },
+  methods: {
+    removeTitle() {
+      this.title = "";
+      console.log("title", this.title);
     }
   }
 }
