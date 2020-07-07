@@ -1,6 +1,9 @@
 <template>
   <div>
-    <app-header :title="title" @changeTitle='title=$event'></app-header>
+    <app-header :title="title" @changeTitle='title=$event'>
+      <h2>Added some random code</h2>
+      <p>Code added for trying out slots</p>
+    </app-header>
     <app-coders :coders="coders"></app-coders>
     <hr/>
     <app-coders :coders="coders"></app-coders>
@@ -30,30 +33,6 @@ export default {
         ],
     }
   },
-  // Lifecycle Hooks
-  beforeCreate() {
-    alert('before create');
-  },
-  created() {
-    alert('created');
-  },
-  beforeMount() {
-    alert('before mount');
-  },
-  mounted() {
-    alert('mounted');
-  },
-  beforeUpdate() {
-    alert('before update');
-  },
-  updated() {
-    alert('updated');
-  },
-  methods: {
-    greeting () {
-      return "";
-    }
-  }
 }
 </script>
 
