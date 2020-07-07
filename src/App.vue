@@ -1,26 +1,16 @@
 <template>
-  <div>
-    <app-header :title="title" @changeTitle='title=$event'>
-      <h2 slot="title">Added some random code</h2>
-      <p slot="text">Code added for trying out slots</p>
-    </app-header>
-    <app-coders :coders="coders"></app-coders>
-    <hr/>
-    <app-coders :coders="coders"></app-coders>
-    <app-footer :title="title"></app-footer>
-  </div>
+  <form-helper>
+  </form-helper>
 </template>
 
 <script>
-import Header from './components/Header.vue';
-import Footer from './components/Footer.vue';
-import Coders from './components/Coders.vue';
+import formOne from './components/formOne.vue';
+import formTwo from './components/formTwo.vue';
 
 export default {
   components: {
-    'app-coders': Coders,
-    'app-header': Header,
-    'app-footer': Footer, 
+    'form-one': formOne,
+    'form-two': formTwo
   },
   data () {
     return {
