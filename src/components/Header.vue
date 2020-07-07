@@ -1,6 +1,6 @@
 <template>
   <header>
-    <h1 @click="removeTitle">{{ title }}</h1>
+    <h1 @click="changeTitle">{{ title }}</h1>
   </header>
 </template>
 
@@ -17,9 +17,8 @@ export default {
     }
   },
   methods: {
-    removeTitle() {
-      this.title = "";
-      console.log("title", this.title);
+    changeTitle() {
+      this.$emit('changeTitle', 'New Title');
     }
   }
 }

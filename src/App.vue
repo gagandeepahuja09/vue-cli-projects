@@ -1,6 +1,6 @@
 <template>
   <div>
-    <app-header :title="title"></app-header>
+    <app-header :title="title" @changeTitle='title=$event'></app-header>
     <app-coders :coders="coders"></app-coders>
     <hr/>
     <app-coders :coders="coders"></app-coders>
@@ -29,6 +29,25 @@ export default {
             { name: "Barry", majors: "CIE", show: false },
         ],
     }
+  },
+  // Lifecycle Hooks
+  beforeCreate() {
+    alert('before create');
+  },
+  created() {
+    alert('created');
+  },
+  beforeMount() {
+    alert('before mount');
+  },
+  mounted() {
+    alert('mounted');
+  },
+  beforeUpdate() {
+    alert('before update');
+  },
+  updated() {
+    alert('updated');
   },
   methods: {
     greeting () {
