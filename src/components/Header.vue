@@ -1,7 +1,8 @@
 <template>
   <header>
-    <slot></slot>
+    <slot name="text"></slot>
     <h1 @click="changeTitle">{{ title }}</h1>
+    <slot name="title"></slot>
   </header>
 </template>
 

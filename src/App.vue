@@ -1,8 +1,8 @@
 <template>
   <div>
     <app-header :title="title" @changeTitle='title=$event'>
-      <h2>Added some random code</h2>
-      <p>Code added for trying out slots</p>
+      <h2 slot="title">Added some random code</h2>
+      <p slot="text">Code added for trying out slots</p>
     </app-header>
     <app-coders :coders="coders"></app-coders>
     <hr/>
