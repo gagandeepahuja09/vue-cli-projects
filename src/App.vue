@@ -1,6 +1,9 @@
 <template>
-  <form-helper>
-  </form-helper>
+  <div>
+    <component :is="component"></component>
+    <button @click="component = 'form-one'">Open form one</button>
+    <button @click="component = 'form-two'">Open form two</button>
+  </div>
 </template>
 
 <script>
@@ -14,13 +17,7 @@ export default {
   },
   data () {
     return {
-      title: "Practice App",
-      coders: [
-            { name: "Gary", majors: "EIC", show: false },
-            { name: "Harry", majors: "ECE", show: false },
-            { name: "Larry", majors: "ENC", show: false },
-            { name: "Barry", majors: "CIE", show: false },
-        ],
+      component: 'form-two',
     }
   },
 }
